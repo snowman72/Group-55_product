@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+            color: #fff;
+            background: #161616;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            font-size: 0.9em;
+            max-width: 35em;
+            line-height: 27px;
+        }
+
+        h1, h2 {
+            font-weight: 300;
+        }
+
+        h1 {
+            margin: 0.5em 0;
+            font-size: 3em;
+        }
+
+        .specs h2, .about h2 {
+            font-size: 2em;
+            padding-left: 1.2 em;
+            border-left: 0.1em #5bc7ca solid;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        section {
+            padding: 2.5em;
+        }
+
+        /*Set all flex layout*/
+        nav, .infos, .info, .specs-header, .specs li, .stats {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .specs, .icon, .panel:first-child,
+        .panel:last-child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            height: 100vh;
+            min-height: 30em;
+            background: 
+                url(wheelchair.jpg)
+                no-repeat center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* ===Navbar ===*/
+        nav {
+            padding: 1.5em 2.5 em;
+            position: relative;
+        }
+
+        .menu-btn {
+            display: none;
+        }
+
+        .brand {
+            font-size: 1.3 em;
+        }
+
+        nav li {
+            display: inline-block;
+            margin: 0 0.8 em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+        }
+
+        nav a:hover {
+            color: #eee;
+        }
+
+        /*=== Hader Body ===*/
+        .header-body {
+            padding: 2.5em;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .header-body p {
+            max-width: 25 em;
+        }
+
+        /*=== About Section ===*/
+        .heading h2 {
+            margin-bottom: 1em;
+        }
+
+        .heading p {
+            margin-left: 3em;
+            display: inline-block;
+        }
+
+        .infos {
+            gap: 2em;
+        }
+
+        .infos, .heading {
+            padding: 5em 1em;
+        }
+
+        .info img {
+            max-width: 6em;
+            margin-right: 1em;
+        }
+
+        .info h3 {
+            margin-bottom: 0,5 em;
+        }
+
+        .info p {
+            max-width: 15em;
+        }
+
+        /*=== Specs Section ===*/
+        .specs {
+            background: 
+                url(wheelchair.jpg)
+                no-repeat center;
+            background-size: cover;
+            min-height: 40em;
+            position: relative;
+            padding-top: 8em;
+        }
+
+        .specs-header, .specs ul {
+            position: relative;
+            z-index: 1;
+        }
+
+        .specs ul {
+            width: 40em;
+            margin-top: 3em;
+        }
+
+        .specs li {
+            padding: 0.6em 0;
+            border-bottom: #555 1px solid;
+        }
+
+        .specs li span:first-child {
+            color: #888;
+        }
+
+        /*=== Panels Section ===*/
+        .panels {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 40em;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-top: 8em;
+        }
+
+        .panel > div {
+            padding: 1em;
+        }
+
+        .panels-sm {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .panel:first-child,
+        .panel:last-child {
+            padding: 1em;
+        }
+
+        .panel:first-child {
+            background: #5bc7ca;
+        }
+
+        .panel:last-child {
+            background: #fff;
+            color: #555;
+        }
+
+        .panel:nth-child(2) {
+            background: 
+                url(wheelchair.jpg)
+                no-repeat center;
+        }
+
+        .panel:nth-child(3) {
+            background: 
+                url(wheelchair.jpg)
+                no-repeat center;
+        }
+
+        .panel:nth-child(2),
+        .panel:nth-child(3) {
+            background-size: cover;
+            position: relative;
+        }
+
+        /*Set all image dark overlays*/
+        .specs::before,
+        .panel:nth-child(2)::before,
+        .panel:nth-child(3)::before {
+            content: '';
+            background: rgba(0, 0, 0, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        .panel h2 {
+            margin: 0.7em 0;
+        }
+
+        .panel-lg {
+            background: 
+                url(wheelchair.jpg)
+                no-repeat center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .icon {
+            font-size: 2 em;
+            border-radius: 50%;
+            width: 1.5em;
+            height: 1.5em;
+        }
+
+        .panel:first-child .icon {
+            border: 3px #fff solid;
+        }
+
+        .panel:nth-child(4) .icon {
+            border: 3px #555 solid;
+        }
+
+        /*=== Stats Section ===*/
+        .car-stats {
+            padding: 5em 1em;
+        }
+
+        .stats {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .stats > div {
+            margin-bottom: 1em;
+            position: relative;
+            min-width: 10em;
+        }
+
+        .stats > div h1:nth-child(2) {
+            color: #282822;
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        .stats h5 {
+            font-weight: 400;
+            text-transform: uppercase;
+            font-size: 0.7em;
+        }
+
+        .counter {
+            margin: 0.1em 0;
+        }
+
+        .car {
+            padding: 4em 1em 4em 1em;
+            margin-top: 8em;
+        }
+
+        .circle {
+            border: 2px #ccc solid;
+            border-radius: 50%;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            background: #161616;
+            animation: 
+                glow 4s ease-in-out infinite;
+            aspect-ratio: 3 / 1;
+        }
+
+        .car img {
+            width: 70%;
+            position: absolute;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+
+        .circle div {
+            border: inherit;
+            border-radius: inherit;
+            background: inherit;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: inherit;
+        }
+
+        .circle .inner-md-circle {
+            width: 75%;
+            height: 75%;
+            top: 10%;
+            animation-delay: 3s;
+        }
+
+        .circle .inner-sd-circle {
+            width: 50%;
+            height: 50%;
+            top: 20%;
+            animation-delay: 6s;
+        }
+
+        /*Circle Glow Animation*/
+        @keyframes glow {
+            0% {
+                box-shadow: none;
+            }
+            50% {
+                box-shadow: 0 0 1em #5bc7ca;
+            }
+            100% {
+                box-shadow: none;
+            }
+        }
+
+        @media screen and (max-width: 900px) {
+            .menu-btn {
+                display: block;
+                font-size: 1.2em;
+                cursor: pointer;
+            }
+            .menu-btn: hover {
+                color: #eee;
+            }
+            .brand, .menu-btn {
+                position: relative;
+                z-index: 1;
+            }
+            .menu {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 0;
+                background: #161616;
+                width: 100%;
+                z-index: 0;
+                height: 0;
+                overflow-y: hidden;
+                transition: 0.6s ease-in-out;
+            }
+            /*Open class for JS*/
+            .menu-open {
+                height: 17em;
+                padding: 5em 0 1em 0;
+            }
+            .menu li {
+                display: block;
+                margin: 1em 0;
+            }
+            .specs ul {
+                width: 80vw;
+            }
+            .infos, .info, .stats {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            .infos {
+                gap: 3em;
+            }
+            .info img {
+                margin: 0 0 1em 0;
+            }
+            .panels, . panels-sm {
+                grid-template-columns: 1fr;
+            }
+            .panels, .panel-lg {
+                min-height: 15em;
+            }
+            .panel:nth-child(2) {
+                order: 1;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            html {
+                font-size: 14px;
+            }
+        }
+
+
+
+
+
+    </style>
+     <script>
+        //Navbar
+        const menu = document.querySelector('.menu');
+        const menuBtn = document.querySelector('.menu-btn')
+
+        //Add click event
+        menuBtn.addEventListener('cick', () => {
+            //Toggle menu open class
+            menu.classList.toggle('menu-open');
+        });
+
+        //Stats Counter
+        const stats = document.querySelector('.stats');
+        const counters = document.querySelectorAll(".counter");
+        let bol = false;
+
+        /*Get stats section offset
+        from the top of the page +
+        the stats element height*/
+        const sectionOffset = stats.offsetTop + stats.offsetHeight;
+
+        /*Start the counter when the page
+        is scrolled to the stats section*/
+        window.addEventListener("scroll", () => {
+            /*Get page offset from top +
+            the whole screen height*/
+            const pageOffset = window.innerHeight + pageYOffset;
+            /*Run the updateCount function if the page is
+            scrolled past the stats section, and run only once*/ 
+            if(pageOffset > sectionOffset && bol === false) {
+                //Select all counters
+                counters.forEach(counter => {
+                    function updateCount() {
+                        /*Set variables and overwrite them every
+                        time with the '+' shorthand*/
+                        const target = +counter.getAttribute('data-target');
+                        const speed = +counter.getAttribute('data-speed');
+                        const count = +counter.innerText;
+
+                        //Check if target is rached
+                        if(count < target) {
+                            //Increment
+                            counter.innerText = count + 1;
+                            //Call function every ms
+                            setTimeout(updateCount, speed);
+                            //When the target is reached
+                        } else {
+                            //Stop counting
+                            counter.innerText = target;
+                        }
+                    }
+                    //Run the updateCount function
+                    updateCount();
+                    /*Run the function only once by breaking
+                    one of the condition in the if statement*/
+                    /*
+                        This stops the updateCount function from running
+                        every time you scroll past this section
+                    */ 
+                   bol = true;
+                });
+            }
+        });
+        
+
+
+    </script>
+
+
+
+</head>
+
+   
+
+
+
+    <body>
+        <header>
+            <nav>
+                <a href="index.html" class = "brand">AI Wheelchair</a>
+                <ul class = "menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href ="#">Garage</a></li>
+                    <li><a href="#">News</a></li>
+                    <li><a href="#" class ="btn">Purchase</a></li>
+                </ul>
+                <div class ="menu-btn">
+                    <i class ="fas fa-bars"></i>
+                </div>
+            </nav>
+            <div class ="header-body">
+                <div>
+                    <h1>Build The Future</h1>
+                    <p>
+                        Learner and meaner then ever.
+                        The new Audi R8 boddly goes
+                        where no car has gone before
+                    </p>
+                </div>
+            </div>
+        </header>         
+        
+        <section class=""about">
+            <div class=""heading">
+                <h2>
+                    Take journey, <br />
+                    bend space
+                </h2>
+                <p>
+                    The R8 can't help but steal
+                    the spotlight. With its sharp angular lines and exotic,
+                    glass covered engine, the R8 has a wide and commanding
+                    pressece that makes it impossible
+                    to look anywhere else
+                </p>
+            </div>
+            <div class="infos">
+                <div class="info">
+                    <img src="wheelchair.jpg" alt="icon" width="500" height="150" />
+                    <div>
+                        <h3>Agility</h3>
+                        <p>
+                            Built for speed, with a
+                            5.2 liter V10 engine
+                        </p>
+                    </div>
+                </div>
+                <div class="info">
+                    <img scr="wheelchair.jpg" alt="icon" />
+                    <div>
+                        <h3>Performance</h3>
+                        <p>
+                            Accelerating from zero
+                            to 60 mph in 3.2s
+                        </p>
+                    </div>
+                </div>
+                <div class="info">
+                    <img scr="wheelchair.jpg" alt="icon" />
+                    <div>
+                        <h3>Cutting Edge</h3>
+                        <p>
+                            Sharing half of its parts
+                            with the R8 LMS racecar
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section class=""specs">
+            <div>
+                <div class="specs-header">
+                    <h2>Tech Specs</h2>
+                    <span>Engine</span>
+                </div>
+                <ul>
+                    <li>
+                        <span>Engine displacement</span>
+                        <span>5204</span>
+                    </li>
+                    <li>
+                        <span>Maximum torque</span>
+                        <span>560 Nm @ 6500 rpm</span>
+                    </li>
+                    <li>
+                        <span>Turning radius</span>
+                        <span>5.9 m</span>
+                    </li>
+                    <li>
+                        <span>No. of cylinders</span>
+                        <span>10</span>
+                    </li>
+                    <li>
+                        <span>Drive Type</span>
+                        <span>AWD</span>
+                    </li>
+                    <li>
+                        <span>Turbo Charger</span>
+                        <span>No</span>
+                    </li>
+                    <li>
+                        <span>Super Charger</span>
+                        <span>Yes</span>
+                    </li>
+                    <li>
+                        <span>Fuel Supply</span>
+                        <span>Direct injection</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="panels">
+            <div class="panels-sm">
+                <div class="panel"
+                    <div>
+                        <div class ="icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h2>Power and speed unleashed</h2>
+                        <a href="#">
+                            <span>Learn More</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="panel"></div>
+                <div class="panel"></div>
+                <div class="panel">
+                    <div>
+                        <div class="icon">
+                            <i class=""fas fa-tint"></i>
+                        </div>
+                        <h2>Respectful to environment</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-lg"></div>
+        </section>
+
+        <section class="car-stats">
+            <div class="stats">
+                <div>
+                    <h1
+                        class="counter"
+                        data-target="206"
+                        data-speed="10"
+                    >0
+                    </h1>
+                    <h1>kmph</h1>
+                    <h5>Top Speed</h5>
+                </div>
+                <div>
+                    <h1
+                        class="counter"
+                        data-target="7"
+                        data-speed="500"
+                    >0
+                    </h1>
+                    <h1>gears</h1>
+                    <h5>Gear Box</h5>
+                </div>
+                <div>
+                    <h1
+                        class="counter"
+                        data-target="473"
+                        data-speed="1"
+                    >0
+                    </h1>
+                    <h1>hp</h1>
+                    <h5>Horse Power</h5>
+                </div>
+            </div>
+            <div class="car">
+                <div class="circle">
+                    <img src="wheelchair.jpg" alt="car" width="500" height="150"/>
+                    <div class="inner-md-circle"></div>
+                    <div class="inner-sm-circle"></div>
+                </div>
+            </div>
+
+
+
+
+        </section>
+
+
+
+
+
+
+    </body>
+
+</html>
