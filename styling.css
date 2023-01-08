@@ -55,7 +55,13 @@ section {
     align-items: center;
 }
 
-.specs, .icon, .panel:first-child, .panel:last-child {
+.specs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon, .panel:first-child, .panel:last-child, {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -148,7 +154,7 @@ header {
 /*=== Specs Section ===*/
 .specs {
     background: 
-        url(img/banner2.jpg)
+        url(img/wc5.jpeg)
         no-repeat center;
     background-size: cover;
     min-height: 40em;
@@ -177,6 +183,7 @@ header {
 
 /*=== Panels Section ===*/
 .panels {
+    text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     min-height: 40em;
@@ -210,13 +217,13 @@ header {
 
 .panel:nth-child(2) {
     background: 
-        url(wheelchair.jpg)
+        url(img/1.jpg)
         no-repeat center;
 }
 
 .panel:nth-child(3) {
     background: 
-        url(wheelchair.jpg)
+        url(img/2.jpg)
         no-repeat center;
 }
 
@@ -246,19 +253,14 @@ header {
 
 .panel-lg {
     background: 
-        url(wheelchair.jpg)
+        url(img/wc4.jpeg)
         no-repeat center;
     background-size: cover;
     width: 100%;
     height: 100%;
 }
 
-.icon {
-    font-size: 2 em;
-    border-radius: 50%;
-    width: 1.5em;
-    height: 1.5em;
-}
+
 
 .panel:first-child .icon {
     border: 3px #fff solid;
@@ -271,35 +273,6 @@ header {
 /*=== Stats Section ===*/
 .car-stats {
     padding: 5em 1em;
-}
-
-.stats {
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.stats > div {
-    margin-bottom: 1em;
-    position: relative;
-    min-width: 10em;
-}
-
-.stats > div h1:nth-child(2) {
-    color: #282822;
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    font-size: 2.5em;
-    font-weight: 700;
-}
-
-.stats h5 {
-    font-weight: 400;
-    text-transform: uppercase;
-    font-size: 0.7em;
 }
 
 .counter {
@@ -325,9 +298,10 @@ header {
 }
 
 .car img {
-    width: 70%;
+    width: 100%;
+    height: 200%;
     position: absolute;
-    top: -50%;
+    top: -100%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
