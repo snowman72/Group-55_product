@@ -1,0 +1,334 @@
+/*Navi Bar*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#showcase {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/wc-home.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    border-right: none;
+  }
+  
+  .logo {
+    width: 120px;
+    color: #fff;
+  }
+  
+  .navbar ul li {
+    /* list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+    float:left; */
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .navbar ul li a {
+    /* display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 500; */
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .navbar ul li::after {
+    content: '';
+    height: 2px;
+    width: 0;
+    background: #f1d55b;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  
+  .navbar ul li:hover::after {
+    width: 100%;
+  }
+  
+/*contact us*/
+/* * 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+} */
+body
+{
+    background: linear-gradient(90deg,#FAAB78 0%,#FAAB78 30%,#FFD495 30%, #FFD495 100%);
+}
+
+.contactUs
+{
+    position: relative;
+    width: 100%; 
+}
+.contactUs .title
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.contactUs .title h2
+{
+    color:#2D4059;
+    font-size: 500;
+    text-transform: uppercase;
+}
+
+.form
+{
+    grid-area: form;
+}
+.info
+{
+    grid-area: info;
+}
+.map
+{
+    grid-area: map;
+}
+.contact
+{
+    padding: 40px;
+    background: #fff;
+}
+.box
+{
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 6fr ;
+    grid-template-areas: 
+    "form info"
+    "form map";
+    grid-gap:20px;
+    margin-top: 20px;
+}
+.contact h3
+{
+    color: #2D4059;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/*form*/
+.formBox
+{
+    position: relative;
+    width:100%;
+}
+
+.formBox .row50
+{
+    display: flex;
+    gap: 20px;
+}
+
+.inputBox
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    width:50%;
+}
+
+.formBox .row100 .inputBox
+{
+    width: 100%;
+}
+
+.inputBox span
+{
+    color: #EA5455;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight:bold;
+    font-size:20px;
+}
+
+.inputBox input
+{
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+    border: 1px solid #333
+}
+
+.inputBox textarea
+{
+    padding: 10px;
+    font-size: 1.1em;
+    outline: none;
+    border: 1px solid #333;
+    resize: none;
+    min-height: 220px;
+    margin-bottom: 10px;
+
+}
+
+.inputBox input[type="submit"]
+{
+    background-color: #F07B3F;
+    color:#fff;
+    border: none;
+    font-size: 25px;
+    max-width: 120px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 14px 15px;
+}
+
+.inputBox ::placeholder
+{
+    color: #333;
+}
+
+/*info*/
+.info
+{
+    background: #FFD460;
+}
+
+.info h3
+{
+    color:#333;
+    font-size: 25px;
+}
+
+.info .infoBox div
+{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.info .infoBox div span
+{
+    min-width: 40px;
+    height:40px;
+    color:#fff;
+    background:#FAAB78 ;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:15px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+
+.info .infoBox div p
+{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.info .infoBox div a
+{
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.sci
+{
+    margin-top: 40px;
+    display: flex;
+}
+
+.sci li
+{
+    list-style-type: none;
+    margin-right: 15px;
+}
+
+.sci li a
+{
+    color:#fff;
+    font-size: 2em;
+    color:#333;
+}
+
+.sci li a:hover
+{
+    color:#fff
+}
+
+.map
+{
+    padding:0;
+}
+
+.map iframe
+{
+    width:100%;
+    height:100%;
+}
+
+/*footer style*/
+footer
+{
+  background: #f1d55b;
+  height: auto;
+  width: auto;
+  padding-top: 0px;
+  color:black;
+}
+
+.footer-content
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.footer-content p
+{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: capitalize;
+}
+
+.footer-content span
+{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+}
