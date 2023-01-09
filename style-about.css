@@ -1,21 +1,39 @@
-/*navi bar*/
+/*Navi Bar*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+#showcase {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/wc-home.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 .navbar {
   width: 85%;
   margin: auto;
   padding: 35px 0;
-  display: flex;
+  display:flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content:space-between;
+  border-right: none;
 }
 
 .logo {
-  width: 80px;
+  width: 120px;
   color: #fff;
-  text-transform: uppercase;
-  font-size: 50px;
 }
 
 .navbar ul li {
+  /* list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow:hidden;
+  float:left; */
   list-style: none;
   display: inline-block;
   margin: 0 20px;
@@ -23,16 +41,22 @@
 }
 
 .navbar ul li a {
+  /* display: block;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
   color: #fff;
   text-transform: uppercase;
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 500; */
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 .navbar ul li::after {
   content: '';
-  height: 3px;
+  height: 2px;
   width: 0;
   background: #f1d55b;
   position: absolute;
@@ -47,14 +71,14 @@
 
 
 /*team name*/
-*
+/* 
 {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
   font-family: 'Courier New', Courier, monospace;
 }
-
+*/
 .section
 {
   width: 100%;
@@ -87,7 +111,7 @@
 .image-section img
 {
   width:100%;
-  height:auto;
+  height:100%;
   border-radius: 50%;
 }
 
@@ -96,7 +120,7 @@
   text-transform: capitalize;
   font-size: 20px;
   color:#EA5455;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: sans-serif;
   font-weight: bold;
   text-align: center;
 }
@@ -106,7 +130,7 @@
   margin-top: 25px;
   color: black;
   font-size: 22px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: sans-serif;
   font-weight: bold;
   text-align: center;
 
@@ -115,9 +139,9 @@
 .content-section .content p
 {
   margin-top: 10px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: sans-serif;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1.75;
 }
 
 
@@ -127,7 +151,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family:'Courier New', Courier, monospace;
+  font-family:sans-serif;
   box-sizing: border-box;
 }
 body{
@@ -142,7 +166,7 @@ body{
   margin-top: 10%;
 }
 .wrapper h1{ 
-  font-family:'Courier New', Courier, monospace;
+  font-family:sans-serif;
   font-size: 30px;
   margin-bottom: 60px;
   text-align: center;
@@ -172,7 +196,7 @@ color:#EA5455;
 font-size: 26px;
 margin-top: 70px;
 font-style: italic;
-font-family:'Courier New', Courier, monospace;
+font-family:sans-serif;
 font-weight: bold;
 }
 
@@ -207,7 +231,7 @@ footer
   background: #FFD495;
   height: auto;
   width: auto;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: sans-serif;
   padding-top: 0px;
   color:black;
 }
@@ -228,7 +252,7 @@ footer
   margin: 10px auto;
   line-height: 28px;
   font-size: 14px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: sans-serif;
   text-transform: capitalize;
 }
 
@@ -237,5 +261,5 @@ footer
   text-transform: uppercase;
   opacity: .4;
   font-weight: 500;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: sans-serif;
 }

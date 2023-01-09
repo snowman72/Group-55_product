@@ -1,4 +1,10 @@
 /*Navi Bar*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
 #showcase {
     width: 100%;
     height: auto;
@@ -18,29 +24,34 @@
   }
   
   .logo {
-    width: 80px;
+    width: 120px;
     color: #fff;
-    text-transform: uppercase;
-    font-size: 50px;
   }
   
   .navbar ul li {
-    list-style-type: none;
+    /* list-style-type: none;
     margin: 0;
     padding: 0;
     overflow:hidden;
-    float:left;
+    float:left; */
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
   }
   
   .navbar ul li a {
-    display: block;
+    /* display: block;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     color: #fff;
     text-transform: uppercase;
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 500; */
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
   }
   
   .navbar ul li::after {
@@ -59,13 +70,13 @@
   }
   
 /*contact us*/
-* 
+/* * 
 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family:'Courier New', Courier, monospace;
-}
+} */
 body
 {
     background: linear-gradient(90deg,#FAAB78 0%,#FAAB78 30%,#FFD495 30%, #FFD495 100%);
@@ -74,8 +85,7 @@ body
 .contactUs
 {
     position: relative;
-    width: 100%;
-    padding: 40px 100px;
+    width: 100%; 
 }
 .contactUs .title
 {
