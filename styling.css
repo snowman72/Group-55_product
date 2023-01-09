@@ -1,8 +1,65 @@
+/*Navi Bar*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#showcase { 
+    width: 100%;
+    height: auto; 
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.navbar {
+    width: 85%;
+    margin: auto; 
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    width: 20%;
+    color: #fff;
+  }
+ 
+  .navbar ul li { 
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .navbar ul li a { 
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f1d55b;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  
+  .navbar ul li:hover::after {
+    width: 100%;
+  }
+
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
     color: #fff;
-    background: #2D4059;
+    background: #FFD495;
 }
 
 * {
@@ -78,34 +135,6 @@ header {
     flex-direction: column;
 }
 
-/*=== Navbar ===*/
-.nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
-    position: relative;
-}
-
-.nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
-}
-
-.nav ul li::after {
-    content: '';
-    height: 3px;
-    width: 0;
-    background: #f1d55b;
-    position: absolute;
-    left: 0;
-    bottom: -10px;
-    transition: 0.5s;
-}
-
-.nav ul li:hover::after {
-    width: 100%;
-}
 
 /*=== Header Body ===*/
 .header-body {
@@ -121,6 +150,10 @@ header {
 }
 
 /*=== About Section ===*/
+.about {
+    color: black;
+}
+
 .heading h2 {
     margin-bottom: 1em;
 }
@@ -285,13 +318,13 @@ header {
 }
 
 .circle {
-    border: 2px #ccc solid;
+    border: 2px rgb(204, 204, 204) solid;
     border-radius: 50%;
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
     position: relative;
-    background: #2D4059;
+    background: #FFD495;
     animation: 
         glow 4s ease-in-out infinite;
     aspect-ratio: 3 / 1;
@@ -337,7 +370,7 @@ header {
         box-shadow: none;
     }
     50% {
-        box-shadow: 0 0 1em #5bc7ca;
+        box-shadow: 0 0 1em #FAAB78;
     }
     100% {
         box-shadow: none;
