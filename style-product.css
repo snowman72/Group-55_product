@@ -1,0 +1,435 @@
+/*Navi Bar*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+#showcase { 
+    width: 100%;
+    height: auto; 
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+.navbar {
+    width: 85%;
+    margin: auto; 
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    width: 20%;
+    color: #fff;
+  }
+ 
+  .navbar ul li { 
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .navbar ul li a { 
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #f1d55b;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+  
+  .navbar ul li:hover::after {
+    width: 100%;
+  }
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #2D4059;
+}
+ 
+
+p {
+    font-size: 0.9em;
+    max-width: 35em;
+    line-height: 27px;
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+
+h1 {  
+    font-weight: bold;
+}
+
+.specs h2, .about h2 {
+    font-size: 2em;
+    padding-left: 1.2em;
+    border-left: 00.1em #5bc7ca solid;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+section {
+    padding: 2.5em;
+}
+
+/*Set all flex layouts*/
+.nav, .infos, .info,
+.specs-header, .specs li,
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 85%;
+    margin: auto;
+}
+
+.specs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon, .panel:first-child, .panel:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: 100vh;
+    min-height: 30em;
+    background: 
+        linear-gradient(rgba(0,0,0,0.25),rgba(0,0,0,0.25)),url(images/wc-home.jpg)
+        no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*=== Header Body ===*/
+.header-body {
+    padding: 2.5em;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.header-body p {
+    max-width: 25em;
+}
+
+/*=== About Section ===*/
+.heading h2 {
+    margin-bottom: 1em;
+}
+
+.heading p {
+    margin-left: 3em;
+    display: inline-block;
+}
+
+.infos {
+    gap: 2em;
+}
+
+.infos, .heading {
+    padding: 5em 1em;
+}
+
+.info img {
+    max-width: 6em;
+    margin-right: 1em;
+}
+
+.info h3 {
+    margin-bottom: 0,5em;
+}
+
+.info p {
+    max-width: 15em;
+}
+
+/*=== Specs Section ===*/
+.specs {
+    background: 
+        url(images/wc7-product.jpeg)
+        no-repeat center;
+    background-size: cover;
+    min-height: 40em;
+    position: relative;
+    padding-top: 8em;
+}
+
+.specs-header, .specs ul {
+    position: relative;
+    z-index: 1;
+}
+
+.specs ul {
+    width: 40em;
+    margin-top: 3em;
+}
+
+.specs li {
+    padding: 0.6em 0;
+    border-bottom: #555 1px solid;
+}
+
+.specs li span:first-child {
+    color: #888;
+}
+
+/*=== Panels Section ===*/
+.panels {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 40em;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 8em;
+}
+
+.panel > div {
+    padding: 1em;
+}
+
+.panels-sm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.panel:first-child,
+.panel:last-child {
+    padding: 1em;
+}
+
+.panel:first-child {
+    background: #5bc7ca;
+}
+
+.panel:last-child {
+    background: #fff;
+    color: #555;
+}
+
+.panel:nth-child(2) {
+    background: 
+        url(images/wc1-product.jpg)
+        no-repeat center;
+}
+
+.panel:nth-child(3) {
+    background: 
+        url(images/wc2-product.jpg)
+        no-repeat center;
+}
+
+.panel:nth-child(2),
+.panel:nth-child(3) {
+    background-size: cover;
+    position: relative;
+}
+
+/*Set all image dark overlays*/
+.specs::before,
+.panel:nth-child(2)::before,
+.panel:nth-child(3)::before {
+    content: '';
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.panel h2 {
+    margin: 0.7em 0;
+}
+
+.panel-lg {
+    background: 
+        url(images/wc6-product.jpeg)
+        no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.panel:first-child .icon {
+    border: 3px #fff solid;
+}
+
+.panel:nth-child(4) .icon {
+    border: 3px #555 solid;
+}
+
+/*=== Stats Section ===*/
+.car-stats {
+    padding: 5em 1em;
+}
+
+.counter {
+    margin: 0.1em 0;
+}
+
+.car {
+    padding: 4em 1em 4em 1em;
+    margin-top: 8em;
+}
+
+.circle {
+    border: 2px #ccc solid;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    background: #2D4059;
+    animation: 
+        glow 4s ease-in-out infinite;
+    aspect-ratio: 3 / 1;
+}
+
+.car img {
+    width: 100%;
+    height: 200%;
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.circle div {
+    border: inherit;
+    border-radius: inherit;
+    background: inherit;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: inherit;
+}
+
+.circle .inner-md-circle {
+    width: 75%;
+    height: 75%;
+    top: 10%;
+    animation-delay: 3s;
+}
+
+.circle .inner-sd-circle {
+    width: 50%;
+    height: 50%;
+    top: 20%;
+    animation-delay: 6s;
+}
+
+/*Circle Glow Animation*/
+@keyframes glow {
+    0% {
+        box-shadow: none;
+    }
+    50% {
+        box-shadow: 0 0 1em #5bc7ca;
+    }
+    100% {
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .menu-btn {
+        display: block;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    .menu-btn:hover {
+        color: #eee;
+    }
+    .brand, .menu-btn {
+        position: relative;
+        z-index: 1;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        background: #161616;
+        width: 100%;
+        z-index: 0;
+        height: 0;
+        overflow-y: hidden;
+        transition: 0.6s ease-in-out;
+    }
+    /*Open class for JS*/
+    .menu-open {
+        height: 17em;
+        padding: 5em 0 1em 0;
+    }
+    .menu li {
+        display: block;
+        margin: 1em 0;
+    }
+    .specs ul {
+        width: 80vw;
+    }
+    .infos, .info, .stats {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .infos {
+        gap: 3em;
+    }
+    .info img {
+        margin: 0 0 1em 0;
+    }
+    .panels, .panels-sm {
+        grid-template-columns: 1fr;
+    }
+    .panels, .panel-lg {
+        min-height: 15em;
+    }
+    .panel:nth-child(2) {
+        order: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+}

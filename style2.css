@@ -1,0 +1,241 @@
+/*navi bar*/
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 80px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.navbar ul li::after {
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #f1d55b;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
+  width: 100%;
+}
+
+
+/*team name*/
+*
+{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.section
+{
+  width: 100%;
+  min-height: 100vh;
+  background-color: #FFD495;
+}
+
+.container
+{
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.content-section
+{
+  display: block;
+  float:left;
+  width:55%;
+}
+
+.image-section
+{
+  float:right;
+  width: 40%;
+
+}
+
+.image-section img
+{
+  width:100%;
+  height:auto;
+  border-radius: 50%;
+}
+
+.content-section .title
+{
+  text-transform: capitalize;
+  font-size: 20px;
+  color:#EA5455;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: center;
+}
+
+.content-section .content h3
+{
+  margin-top: 25px;
+  color: black;
+  font-size: 22px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.content-section .content p
+{
+  margin-top: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+
+
+
+/*About team members style*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family:'Courier New', Courier, monospace;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/sunshine.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper{
+  margin-top: 10%;
+}
+.wrapper h1{ 
+  font-family:'Courier New', Courier, monospace;
+  font-size: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  background: #FFD495;
+  margin: 5px;
+  margin-bottom: 50px;
+  
+}
+.team{
+  display: flex;
+  text-align:center;
+  width: auto;
+  justify-content: center;
+}
+.team .team_member{
+  background: #fff;
+  margin:5px;
+  margin-bottom: 50px;
+  width: 300px;
+  line-height: 20px;
+  color: #2D4059;
+  position: relative;
+}
+.team .team_member h3{
+color:#EA5455;
+font-size: 26px;
+margin-top: 70px;
+font-style: italic;
+font-family:'Courier New', Courier, monospace;
+font-weight: bold;
+}
+
+.team .team_member p.IT_interest {
+  color:#2D4059;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 12px 0;
+}
+
+.team .team_member .team_img{
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  position:absolute;
+  top:-50px;
+  left: 50%;;
+  transform: translateX(-50%);
+  background: #fff;
+}
+.team .team_member .team_img img{
+ width: 100px;
+ height: 100px;
+ border-radius: 50%;
+ padding: 10px;
+
+}
+
+/*footer style*/
+footer
+{
+  background: #FFD495;
+  height: auto;
+  width: auto;
+  font-family: 'Courier New', Courier, monospace;
+  padding-top: 0px;
+  color:black;
+}
+
+.footer-content
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.footer-content p
+{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: capitalize;
+}
+
+.footer-content span
+{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 500;
+  font-family: 'Times New Roman', Times, serif;
+}
