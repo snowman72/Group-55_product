@@ -74,11 +74,14 @@ p {
     line-height: 27px;
 }
 
-h1, h2 {
+.header-body h1,
+.about h2,
+.specs h2,
+.panel h2 {
     font-weight: 300;
 }
 
-h1 {
+.header-body h1 {
     margin: 0.5em 0;
     font-size: 3em;
     font-weight: bold;
@@ -440,4 +443,43 @@ header {
     html {
         font-size: 14px;
     }
+}
+
+/*footer style*/
+footer
+{
+  background: #5bc7ca;
+  height: auto;
+  width: auto;
+  font-family: sans-serif;
+  padding-top: 0px;
+  color:black;
+}
+
+.footer-content
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.footer-content p
+{
+  max-width: 500px;
+  margin: 10px auto;
+  line-height: 28px;
+  font-size: 14px;
+  font-family: sans-serif;
+  text-transform: capitalize;
+}
+
+.footer-content span
+{
+  text-transform: uppercase;
+  opacity: .4;
+  font-weight: 500;
+  font-family: sans-serif;
 }
